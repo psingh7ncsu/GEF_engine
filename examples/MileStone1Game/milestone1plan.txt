@@ -1,0 +1,20 @@
+
+three entites: 
+
+pc:
+    Player sprite
+    Gravity Acting on it
+    Spacebar moves upwards 
+
+static:
+Roof Tile 
+Floor Tile
+
+moving:
+    Pipe: 
+        take windowHeight, divide by 10 
+            two of the sections will be clear (2-9, ie rand(1,8)
+            The sections next to those will have a lip 
+        lets say 6 pipes per screen ( spawn new one at windowWidth/6)
+            delete when horizontal position becomes negative
+        moves at rate x, x can increase as game goes on 

@@ -18,3 +18,6 @@ target_link_libraries(collision_demo PRIVATE engine)
 
 add_executable(scaling_demo scaling_demo/main.cpp)
 target_link_libraries(scaling_demo PRIVATE engine)
+
+add_executable(ms1Game Milestone1Game/ms1GamePS.cpp)
+target_link_libraries(ms1Game PRIVATE engine)
