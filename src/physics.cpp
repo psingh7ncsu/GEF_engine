@@ -59,10 +59,11 @@ Rect PhysicsSystem::GetCollisionOverlap(Scene& scene, EntityId entityID1, Entity
     SDL_FRect e2 = {e2Pos.position.x, e2Pos.position.y, e2Collider->size.x, e2Collider->size.y};
     SDL_FRect e3 = {0.0, 0.0, 0.0, 0.0};
 
-    SDL_GetRectIntersectionFloat(&e1, &e2, &e3);
-    
-    auto retVal = Rect{{e3.x, e3.y}, {e3.w, e3.h}};
-    return retVal;
+    if (!SDL_GetRectIntersectionFloat(&e1, &e2, &e3)) {
+        return Rect{{0, 0}, {0, 0}};
+    }
+
+    return Rect{{e3.x, e3.y}, {e3.w, e3.h}};
 }
 
 } // namespace engine
