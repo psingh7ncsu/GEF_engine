@@ -149,7 +149,7 @@ class PipeManager {
 };
 
 
-int jumpHelper(const engine::InputHandler& input, engine::SC::SDL_Scancode key, engine::Scene& scene, 
+int jumpHelper(engine::InputHandler& input, engine::SC::SDL_Scancode key, engine::Scene& scene, 
     engine::EntityId e, float jumpHeight, float timeStep)
 {
         if (input.isKeyPressed(key)) {
